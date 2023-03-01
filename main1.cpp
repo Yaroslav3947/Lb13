@@ -5,8 +5,6 @@ struct Stack {
     Stack *next;
 };
 
- 
-
 void push(Stack *&top, int value) { 
     Stack* newElement = new Stack;
     newElement->data = value;
