@@ -27,7 +27,7 @@ bool pop(Stack *&top, int& value) {
 }
 
 void subtract(Stack *&top1, Stack *&top2, Stack *&resTop) {
-    int borrow {0};
+    int borrow{0};
     while (top1 || top2) {
         int num1{0}, num2{0};
         if (pop(top1, num1)) { 
