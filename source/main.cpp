@@ -1,5 +1,39 @@
 #include <Student.hpp>
 
+#include <Queue.hpp>
+#include <Stack.hpp>
+#include <Vector.hpp>
+
+enum class Option {
+    ADD_STUDENT = 1,
+    SORT_BY_NAME,
+    PRINT_LIST,
+    ADD_STUDENT_SORTED,
+    CHANGE_COUNTRY,
+    PRINT_SUB_LISTS,
+    PRINT_COUNTRIES,
+    EXIT
+};
+
+Option getOption() {
+    int option;
+    showPosibilities();
+    std::cin >> option;
+    return static_cast<Option>(option);
+}
+
+void showPosibilities() {
+    std::cout << "1. Add student\n"
+                  << "2. Sort list by name\n"
+                  << "3. Print list\n"
+                  << "4. Add student to sorted list\n"
+                  << "5. Change country of selected student\n"
+                  << "6. Print sub-lists\n"
+                  << "7. Print countries\n"
+                  << "8. Quit\n"
+                  << "Choose an option:\n";
+}
+
 int main() {
 
     Vector list;

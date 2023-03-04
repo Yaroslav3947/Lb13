@@ -1,14 +1,17 @@
 #pragma once 
 
 #include <Node.hpp>
+#include "Student.hpp"
+
+
 
 struct Vector {
     Node *head;
     int size;
-    Vector(): head{nullptr}, size{0} {}
+    Vector(): head(nullptr), size(0) {}
 
     void push_back(Student data) {
-        Node *newNode = new Node(data);
+        Node *newNode = new Node(Student(data));
         if (head == nullptr) {
             head = newNode;
         } else {

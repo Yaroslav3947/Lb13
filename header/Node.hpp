@@ -5,5 +5,6 @@
 struct Node {
     Student data;
     Node *next;
-    Node(Student data): data{data}, next{nullptr} {}
+
+    Node(Student data): data(data), next(nullptr) {}
 };

@@ -1,4 +1,5 @@
-#include <Student.hpp>
+#include "Student.hpp"
+
 
 void addStudent(const Student &student, Vector &list, Queue &queue, Stack &stack) {
     list.push_back(student);
@@ -115,23 +116,8 @@ Student inputStudent() {
 }
 
 
-void showPosibilities() {
-    std::cout << "1. Add student\n"
-                  << "2. Sort list by name\n"
-                  << "3. Print list\n"
-                  << "4. Add student to sorted list\n"
-                  << "5. Change country of selected student\n"
-                  << "6. Print sub-lists\n"
-                  << "7. Print countries\n"
-                  << "8. Quit\n"
-                  << "Choose an option:\n";
-}
-Option getOption() {
-    int option;
-    showPosibilities();
-    std::cin >> option;
-    return static_cast<Option>(option);
-}
+
+
 
 std::string getNewCountry() {
     std::string newCountry;

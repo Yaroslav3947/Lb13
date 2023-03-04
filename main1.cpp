@@ -20,8 +20,7 @@ bool pop(Stack *&top, int& value) {
         top = top->next;
         delete temp;
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 }

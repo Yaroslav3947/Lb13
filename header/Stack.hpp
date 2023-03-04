@@ -1,10 +1,12 @@
 #pragma once
 
 #include <Node.hpp>
+#include "Student.hpp"
+
 
 struct Stack {
     
-    Stack(): top{nullptr} {}
+    Stack(): top(nullptr) {}
 
     Node *top;
 

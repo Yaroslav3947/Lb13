@@ -1,15 +1,17 @@
 #pragma once 
 
 #include <Node.hpp>
+#include "Student.hpp"
+
 
 struct Queue {
     Node *head;
     Node *tail;
 
-    Queue(): head{nullptr}, tail{nullptr} {}
+    Queue(): head(nullptr), tail(nullptr) {}
 
     void push(Student data) {
-        Node *newNode = new Node(data);
+        Node *newNode = new Node(Student(data));
         if (tail == nullptr) {
             head = newNode;
             tail = newNode;
